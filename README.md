@@ -90,4 +90,4 @@
 
 截图
 
-    ![index.png](https://github.com/jasonSky/phpGraphy-jasonsky/blob/master/index.png)
+    ![image](https://github.com/jasonSky/phpGraphy-jasonsky/blob/master/index.png)
