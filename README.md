@@ -88,6 +88,7 @@
 
  
 
-截图
 
-    ![image](https://github.com/jasonSky/phpGraphy-jasonsky/blob/master/index.png)
+#  截图
+    
+   ![image](https://github.com/jasonSky/phpGraphy-jasonsky/blob/master/index.png)
