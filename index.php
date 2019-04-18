@@ -351,17 +351,17 @@ if ($config['debug_mode'] >= 4) {
 if ($config['use_session']) {
 
     if (is_writable(session_save_path())) {
-
-        // Line below added so the page is still W3C valid
-        if (function_exists("ini_set")) ini_set("arg_separator.output","&amp;");
-
-        session_start();
-
+    
+         //Line below added so the page is still W3C valid
+         if (function_exists("ini_set")) ini_set("arg_separator.output","&amp;");
+    
+    	 session_start();
+    
     } else {
-
-        $config['use_session'] = 0;
-        trigger_error("\$config['use_session'] is set to 1 in the config file but the server session_save_path ".session_save_path()." is currently not writable - correct the directory problem or disable the sessions use", WARNING);
-
+    
+      $config['use_session'] = 0;
+      trigger_error("\$config['use_session'] is set to 1 in the config file but the server session_save_path ".session_save_path()." is currently not writable - correct the directory problem or disable the sessions use", WARNING);
+    
     }
 }
 
@@ -2245,9 +2245,12 @@ if ($config['debug_mode'] >= 4) {
             if ($config['use_direct_urls'] && file_exists($phpGraphyNaming->getLowresFullPath($display))) {
                 $picture['url'] = $phpGraphyNaming->getLowresFullPath($display);
             } else {
-                //$picture['url'] = SCRIPT_NAME . '?displaypic='.$picture['path'];
-                //$picture['url'] = str_replace('%2F','/',$picture['path']);
-                $picture['url'] = $picture['path'];
+                if($picture['type']=='video'){
+           		//$picture['url'] = str_replace('%2F','/',$picture['path']);
+	                $picture['url'] = $picture['path'];
+		}else{
+                	$picture['url'] = SCRIPT_NAME . '?displaypic='.$picture['path'];
+		}
             }
         }
 
