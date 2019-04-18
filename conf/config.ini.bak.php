@@ -13,10 +13,9 @@
 
 admin_ip = "124.65.116.170"
 install_mode = 1
-debug_mode = 1
+debug_mode = 3
 language_file = "lang_zh.inc.php"
 thumb_generator = "convert"
-use_session = 0
 highres_min_level = 100
 lr_limit = 52428800
 thumb_quality = 100
@@ -26,3 +25,5 @@ files_sort_by = "datetime"
 movie_extractor = "ffmpeg"
 dirs_sort_by = "datetime"
 directory_display_mode = "icon"
+use_rating = 0
+use_session = 1
