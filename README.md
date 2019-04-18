@@ -17,6 +17,10 @@
          修改/etc/php.ini
               session.save_path
          service php-fpm restart
+         
+         session --会话级，关闭浏览器失效
+         cookie -- 客户端级，没有到过期时间还会保持（functions_global.inc.php： $expiration_date = time()+(60*24);）
+
 
 # 部署安装
  1. 环境 nginx + php-fpm
