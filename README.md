@@ -8,7 +8,15 @@
   3. 修改ffmpeg生成视频缩略图
   
           ffmpeg -i input -ss 1 -vframes 100x100 -y -f mjpeg -vframes 1 output 2>&1
+          
+  4. Session开启
+         
+         index.php中 session_save_path() --设置路径， 否则默认为/var/lib/php/session
+         注意：需要赋权  cd /var/lib   chmod -R 777 php
 
+         修改/etc/php.ini
+              session.save_path
+         service php-fpm restart
 
 # 部署安装
  1. 环境 nginx + php-fpm
@@ -85,8 +93,6 @@
     wget http://pkgrepo.linuxtech.net/el6/release/x86_64/liborc-0.4.14-1.el6.x86_64.rpm
 
   3. 运行http://x.x.x.x:port/install.php进行安装即可
-
- 
 
 
 #  截图
