@@ -30,7 +30,7 @@
         server{
          listen 80;
          server_name photo.jasonsky.com.cn;
-         client_max_body_size 50M;
+         client_max_body_size 200M;
          location / {
             root   /home/php/www/phpgraphy;
             index  index.php index.html index.htm;
@@ -101,4 +101,4 @@
 
 #  截图
     
-   ![image](https://github.com/jasonSky/phpGraphy-jasonsky/blob/master/index.png)
+   ![image](/index.png)
