@@ -752,7 +752,6 @@ if (isset($random)) {
 
 
 // BEGIN - DISPLAYPIC
-
 if($displaypic && get_level($displaypic)<=(int)$user_row["seclevel"]) {
 
     // This is all background, don't ouput errors
