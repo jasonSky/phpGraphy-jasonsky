@@ -81,7 +81,7 @@
         <a href="<% $picture[link] %>" title="<% $picture[link_title] %>">
     <% /if %>
     <% if $picture[type] == 'image' %>
-        <img src="<% $picture[url] %>" alt="<% $picture[title] %>" class="picture" />
+        <img src="<% $picture[url] %>" alt="<% $picture[title] %>" width="850px" class="picture" />
     <% elseif $picture[type] == 'video' %>
 
         <%* Firefox doesnt need all this crap but IE does... *%>
@@ -193,7 +193,7 @@
         </div><!--//metadatadiv-->
     <% /if %>
     <% if $picture[type] != 'image' %>
-    <a href="<% $picture[url] %><% if ! $use_direct_urls %>&amp;mode=saveas<% /if %>"><img src="base/images/save-as.png" class="icon" alt="<% $txt[Save_as] %>" title="<% $txt[Save_as] %>" /></a>
+    <a href="/index.php?displaypic=<% $picture[url] %><% if ! $use_direct_urls %>&amp;mode=saveas<% /if %>"><img src="base/images/save-as.png" class="icon" alt="<% $txt[Save_as] %>" title="<% $txt[Save_as] %>" /></a>
     <% /if %>
 
     <% if $config[use_comments] %>
