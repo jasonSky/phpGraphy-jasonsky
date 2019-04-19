@@ -14,7 +14,7 @@
          index.php中 session_save_path() --设置路径， 否则默认为/var/lib/php/session
          注意：需要赋权  cd /var/lib   chmod -R 777 php
 
-         修改/etc/php.ini
+         修改/etc/php-fpm.d/www.conf
               session.save_path
          service php-fpm restart
          
