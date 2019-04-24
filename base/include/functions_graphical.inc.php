@@ -424,15 +424,16 @@ function rotate_image($picname, $rotation_value)
     {
         case "exiftran":
             // Translate phpgraphy rotation code to the matching exiftran argument
-            if ($rotation_value == 1) $rotation_arg = "-9";
-            elseif ($rotation_value == 2) $rotation_arg = "-1";
-            elseif ($rotation_value == 3) $rotation_arg = "-2";
+            if ($rotation_value == 1) $rotation_arg = "90";
+            elseif ($rotation_value == 2) $rotation_arg = "180";
+            elseif ($rotation_value == 3) $rotation_arg = "270";
 
             // Set defaults if not specified
             if (!$config['rotate_tool_path']) $config['rotate_tool_path'] = "exiftran";
             if (!$config['rotate_tool_args']) $config['rotate_tool_args'] = "-p";
 
-            $cmd=$config['rotate_tool_path']." ".$rotation_arg." -i ".$config['rotate_tool_args']." ".escapeshellarg($picname)." -o ".escapeshellarg($picname_tmp);
+            //$cmd=$config['rotate_tool_path']." ".$rotation_arg." -i ".$config['rotate_tool_args']." ".escapeshellarg($picname)." -o ".escapeshellarg($picname_tmp);
+            $cmd="convert ".escapeshellarg($picname)." -rotate ".$rotation_arg. " ".escapeshellarg($picname_tmp);
 
             break;
 

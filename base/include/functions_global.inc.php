@@ -31,7 +31,8 @@ function set_cookie_login_val($val)
 {
     global $error_handler;
 
-    $expiration_date = time()+(3600*24*365*3);
+    //$expiration_date = time()+(3600*24*365*3);
+    $expiration_date = time()+(60*24);
     $domain = HTTP_HOST;
 
     $error_handler->disableDisplay();
