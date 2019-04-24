@@ -19,8 +19,8 @@ $timegen=gettimeofday();
     <meta http-equiv="Content-Script-Type" content="text/javascript" />
     <meta http-equiv="Content-Type" content="text/html; charset=<?php echo $language_file_info['charset'] ?>" />
     <link rel="stylesheet" href="<?php echo $theme_dir ?>phpgraphy.css" type="text/css" />
-    <link rel="icon" href="<?php echo $base_images_dir ?>favico.ico" type="image/ico" />
-    <link rel="shortcut icon" href="<?php echo $base_images_dir ?>favico.ico" type="image/ico" />
+    <link rel="icon" href="<?php echo $base_images_dir ?>favico2.ico" type="image/ico" />
+    <link rel="shortcut icon" href="<?php echo $base_images_dir ?>favico2.ico" type="image/ico" />
     <script src="<?php echo $base_js_dir ?>phpgraphy.js" type="text/javascript"></script>
     <script type="text/javascript" src="<?php echo $base_3rd_part_dir ?>flv-player/swfobject.js"></script>
 <?php if ($mode == 'slideshow') { ?>
