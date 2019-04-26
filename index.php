@@ -2323,8 +2323,8 @@ if ($config['debug_mode'] >= 4) {
                     '.$txt_admin['inherited:'] . get_level($dir).'
                 </div>';
 
-
-            if ($config['rotate_tool'] != "manual") {
+              $dispParm = $_GET['display'];
+	      if ($config['rotate_tool'] != "manual" && (stripos($dispParm,'.png')||stripos($dispParm,'.jpg')||stripos($dispParm,'.jpeg')||stripos($dispParm,'.gif'))){
 
                 $html .= '<div class="formfield" id="rotatebox">'.
                     '<input type=hidden name=rotatepic value="0" />'.$txt['Rotate'].
