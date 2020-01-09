@@ -207,7 +207,7 @@ switch ($config['debug_mode']) {
 
 }
 
-$error_handler =& new YorshErrorHandler($error_display, $error_log, $error_verbose, $error_generic);
+$error_handler = new YorshErrorHandler($error_display, $error_log, $error_verbose, $error_generic);
 
 // Don't display DEBUG messages but keep them safe in a buffer
 $error_handler->setBufferizeDebug(1);

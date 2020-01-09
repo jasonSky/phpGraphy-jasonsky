@@ -132,7 +132,12 @@ class compiler extends template {
 		$compiled_tags	= array();		// all tags and stuff
 
 		// remove all comments
-		$file_contents = preg_replace("!{$ldq}\*.*?\*{$rdq}!se","",$file_contents);
+		//$file_contents = preg_replace("!{$ldq}\*.*?\*{$rdq}!se","",$file_contents);
+              $file_contents = preg_replace_callback("!({$ldq})\*(.*?)\*({$rdq})!s",
+                function($m) { 
+                    return  $m[1]."'". 
+                        str_repeat("\n", substr_count($m[2], "\n"))."'".$m[3]; 
+                },$file_contents);
 
 		// replace all php start and end tags
 		$file_contents = preg_replace('%(<\?(?!php|=|$))%i', '<?php echo \'\\1\'?>'."\n", $file_contents);
